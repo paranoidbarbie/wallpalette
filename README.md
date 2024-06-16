@@ -13,8 +13,8 @@
        - put ```include themes/colour.conf``` at the top of your ```kitty.conf```
 
 3. cd into the git repository ```cd wallpalette```
-   - activate venv ```source bin/activate```
-     - install colorthief ```python -m pip install colorthief```
+   - activate venv ```python -m venv venv && source venv/bin/activate```
+     - install requirements ```pip install -r requirements.txt```
 5. run the main.py ```python main.py```
 
 [^1]: only png or jpg
