@@ -1,0 +1,2 @@
+colorthief==0.2.1
+pillow==10.3.0
