@@ -35,6 +35,7 @@ ps ax | grep main.py
 ```
 > kill the pid of the main.py process.
 
+</details>
 
 ## How to configure the folders according to your needs
 
