@@ -18,6 +18,24 @@
 
 [^1]: only png or jpg
 
+<details>
+
+<summary>A good advanced tip</summary>
+
+### Run it in the background
+> while being in the wallpalette directory
+
+```
+nohup python main.py &
+```
+> To stop the process 
+
+```
+ps ax | grep main.py
+```
+> kill the pid of the main.py process.
+
+
 ## How to configure the folders according to your needs
 
 1. To if you have wallpapers in some other directory please specify it in the line 5 of main.py
