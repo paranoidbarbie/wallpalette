@@ -2,7 +2,9 @@ import os
 import time
 from colour import importColour
 
-directory = f'/home/{os.getlogin()}/Pictures/wallpaper/'
+#wallpaper directory, change it according to your needs. change only from the Pictures. 
+#for example directory = f'/home/{os.getlogin()}/<Path to your image folder>' 
+directory = f'/home/{os.getlogin()}/Pictures/wallpaper/' 
 os.chdir(directory)
 
 def changeImage():
@@ -13,7 +15,9 @@ def changeImage():
         setImage(wallpaper)
 
 
-        
+#if for some reason wallpaper doesn't change please check your monitor settings and 
+#change the eDP-1 in line 22 to the displayed monitor name. 
+#check your monitor settings by typing hyprctl monitors
 def setImage(wallpaper):
     os.system(f'hyprctl hyprpaper preload "{wallpaper}"')
     time.sleep(3)
