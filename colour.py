@@ -7,13 +7,6 @@ def importColour(wallpaper = "/home/yoru/Pictures/wallpaper/sunsetwindow.png"):
     palette = []
     for colour in colours: 
         colour = palette.append(f"#{colour[0]:02x}{colour[1]:02x}{colour[2]:02x}")
-    '''
-    background = palette[0]
-    
-    foreground = palette[1]
-    colour1 = palette[2]
-    colour2 = palette[3]
-    '''
     changeColour(palette)
 
 
