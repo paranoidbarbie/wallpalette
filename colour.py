@@ -1,7 +1,7 @@
 from colorthief import ColorThief
 import os
 
-def importColour(wallpaper = "/home/yoru/Pictures/wallpaper/sunsetwindow.png"):
+def importColour(wallpaper = ""):
     ct = ColorThief("{}".format(wallpaper))
     colours = ct.get_palette(color_count=18)
     palette = []
@@ -12,7 +12,7 @@ def importColour(wallpaper = "/home/yoru/Pictures/wallpaper/sunsetwindow.png"):
 
 def changeColour(palette):
     path = f"/home/{os.getlogin()}/.config/kitty/themes/"
-    filename = os.path.join(path, 'night.conf')
+    filename = os.path.join(path, 'colour.conf')
     colourSteps = 16
     colourDict = {}
 
