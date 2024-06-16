@@ -1,5 +1,5 @@
 <div align='center'>
-  <img src="https://i.imgur.com/R1Mwr0I.gif" width="800px">
+  <img src="https://i.imgur.com/QAkTNfr.gif" width="600px">
   <h1>WallPalette</h1>
   <p>A project to auto change the wallpaper and the respective colourcheme of the terminal. (for Hyprland)</p>
 </div>
