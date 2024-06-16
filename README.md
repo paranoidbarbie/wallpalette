@@ -1,5 +1,4 @@
 <div align='center'>
-  <p><img src="http://i.imgur.com/G3dtrhSh.gif" width="800px"></p>
   <h1>WallPalette</h1>
   <p>A project to auto change the wallpaper and the respective colourcheme of the terminal. (for Hyprland)</p>
 </div>
