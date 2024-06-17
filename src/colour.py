@@ -1,12 +1,14 @@
-from colorthief import ColorThief
+#from colorthief import ColorThief
 import os
+from palette import generate_palette
 
-def importColour(wallpaper = ""):
-    ct = ColorThief("{}".format(wallpaper))
-    colours = ct.get_palette(color_count=18)
+def importColour(wallpaper = "tests/testimage.png"): 
+    colours = generate_palette(wallpaper)
     palette = []
     for colour in colours: 
         colour = palette.append(f"#{colour[0]:02x}{colour[1]:02x}{colour[2]:02x}")
+    #print(colours)
+    #print(palette[1])
     changeColour(palette)
 
 
@@ -22,9 +24,7 @@ def changeColour(palette):
     basicDict = {
         'background' : colourOne,
         'foreground' : colourTwo
-            }
-    
-
+            } 
     for i in range(2,colourSteps):
         key1 = f'color{i-2}'
         key2 = palette[i]
