@@ -2,13 +2,14 @@ import tkinter as tk
 from tkinter.filedialog import askopenfilename
 from tkinter import Label
 from tkinter import Button
+import os
 
 root = tk.Tk()
 root.title("Colour App")
 root.geometry("500x500")
 root.config(background = "#6A0DAD")
 def fileBrowse():
-    fileName = askopenfilename(initialdir='/home/{}', title="Select wallpaper")
+    fileName = askopenfilename(initialdir=f'/home/{os.getlogin()}', title="Select wallpaper")
     label_file_explorer.configure(text="File Opened: "+fileName)
 label_file_explorer = Label(root, 
                             text = "Colour App",
