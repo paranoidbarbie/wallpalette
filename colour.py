@@ -1,20 +1,16 @@
 from colorthief import ColorThief
 import os
 
-def importColour(wallpaper = ""):
+def importColour(wallpaper = "", kittyDir=""):
     ct = ColorThief("{}".format(wallpaper))
     colours = ct.get_palette(color_count=18, quality=10)
     palette = []
     for colour in colours: 
         colour = palette.append(f"#{colour[0]:02x}{colour[1]:02x}{colour[2]:02x}")
-    changeColour(palette)
+    changeColour(palette, kittyDir)
 
 
-def changeColour(palette):
-    #you may wish to change path of your kitty config, in that case replace /.config/kitty/themes/
-    path = f"/home/{os.getlogin()}/.config/kitty/themes/"
-    #if you wish to use a different name for theme file change colour.conf to your wish, but change it in your kitty.conf too. 
-    filename = os.path.join(path, 'colour.conf')
+def changeColour(palette, kittyDir):
     colourSteps = 16
     colourDict = {}
 
@@ -31,7 +27,7 @@ def changeColour(palette):
         key2 = palette[i]
         colourDict[key1] = key2
     
-    with open(filename, 'w') as file:
+    with open(kittyDir, 'w') as file:
         for key, value in basicDict.items():
             file.write(f'{key} {value}\n')
 
