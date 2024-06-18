@@ -4,13 +4,26 @@
   <p>A project to auto change the wallpaper and the respective colourcheme of the terminal. (for Hyprland)</p>
 </div>
 
+## Requirements
+1. Python, colorthief
+2. Kitty 
+
+## Quick settings
+1. Create a colour.conf file in your ~/.config/kitty/themes/ (mandatory)
+2. Create a folder wallpaper in ~/Pictures/ (optional, check usage)
+
+
+## Usage 
+1. ```-d --directory Write the wallpaper directory, default is ~/Pictures/wallpaper```
+2. ```-t --time      Write the time interval between changing of wallpapers, default is 5sec, unit is seconds```
+
 ## How to get it to work
 
 1. Clone the main branch of this repository. 
-2. Create a folder called wallpaper in your ~/Pictures ```mkdir ~/Pictures/wallpaper```
-   - put your wallpapers in that folder[^1]
-     - create a kitty config folder where will be the basic config ```mkdir ~/.config/kitty/themes/```
-       - put ```include themes/colour.conf``` at the top of your ```kitty.conf```
+2. Create a folder called wallpaper in your ~/Pictures ```mkdir ~/Pictures/wallpaper``` (optional)
+   - put your wallpapers in that folder[^1] (optional)
+     - create a kitty config folder where will be the basic config ```mkdir ~/.config/kitty/themes/```(mandatory)
+       - put ```include themes/colour.conf``` at the top of your ```kitty.conf``` (mandatory)
 
 3. cd into the git repository ```cd wallpalette```
    - activate venv ```python -m venv venv && source venv/bin/activate```
