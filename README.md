@@ -11,29 +11,24 @@
 ## Quick settings
 > Just follow the default pattern to not run into issues.
 
-1. Create a colour.conf file in your ~/.config/kitty/ (mandatory, or mention the file name, change the name in your kitty.conf also)
-2. Create a folder called wallpaper in ~/Pictures/ and pull some wallpaper in there. (optional, check usage)
-
-
-## Usage 
-1. ```-d --directory Write the wallpaper directory, default is ~/Pictures/wallpaper```
-2. ```-t --time      Write the time interval between changing of wallpapers, default is 5sec, unit is seconds```
-3. ```-c --config    Write the kitty config file, but make sure to include the config file in your kitty.conf also.
+1. Create a colour.conf file in your ~/.config/kitty/ (mandatory)
+2. In your kitty.conf add a line ```include colour.conf```
+3. Create a folder called wallpaper in ~/Pictures/ and put some wallpapers in there.
 
 ## Make things default
 
-> No need to do these unless you know what you're doing 
+After you're done Quick settings follow these steps
 
-1. Clone the main branch of this repository. 
-2. Create a folder called wallpaper in your ~/Pictures ```mkdir ~/Pictures/wallpaper``` (optional, or specify other directories or change the default location in main.py)
-   - put your wallpapers in that folder[^1] (optional)
-     - create a kitty config file where will be the basic config ```touch ~/.config/kitty/colour.conf```(if you've other paths specify that, change the file name in kitty.conf also)
-       - put ```include colour.conf``` at the top of your ```kitty.conf``` (or specify if you have specifies other names)
-
-3. cd into the git repository ```cd wallpalette```
+1. cd into the git repository ```cd wallpalette```
    - activate venv ```python -m venv venv && source venv/bin/activate```
      - install requirements ```pip install -r requirements.txt```
-5. run the main.py ```python main.py```
+2. run the main.py ```python main.py```
+
+## Usage (no need if you have condifgured files and directories as it's stated above)
+1. ```-d --directory Write the wallpaper directory, default is ~/Pictures/wallpaper```
+2. ```-t --time      Write the time interval between changing of wallpapers, default is 5sec, unit is seconds```
+3. ```-c --config    Write the kitty config file, but make sure to include the config file in your kitty.conf also.```
+
 
 [^1]: only png or jpg
 
